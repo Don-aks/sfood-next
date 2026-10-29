@@ -18,6 +18,10 @@ We use Next.js for SSR and backend, TypeScript as main language, Tailwind for st
 
 - Redux RKT...
 
+## Workflow
+
+We are using GitHub projects with Milestone, GitHub isssues and pull requests.
+
 ## Features
 
 - Authentication. You can login or sign up into this application.
