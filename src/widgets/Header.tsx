@@ -40,8 +40,7 @@ export function Header() {
         <div className="flex flex-wrap items-center gap-12">
           <ul className="flex flex-wrap items-center gap-6">
             {MENU.map((item) => (
-              // TODO: add key prop
-              <li>
+              <li key={item.link}>
                 <Link
                   className={cn('link', pathname === item.link && 'disabled')}
                   href={item.link}
