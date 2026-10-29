@@ -35,17 +35,16 @@ export async function updateSession(request: NextRequest) {
 
   // Здесь мы позже настроим редиректы для защищенных роутов (админка, профиль)
   // Пока просто оставим проверку.
-  /*
+
   if (
     !user &&
     !request.nextUrl.pathname.startsWith('/login') &&
     !request.nextUrl.pathname.startsWith('/auth')
   ) {
-    const url = request.nextUrl.clone()
-    url.pathname = '/login'
-    return NextResponse.redirect(url)
+    const url = request.nextUrl.clone();
+    url.pathname = '/login';
+    return NextResponse.redirect(url);
   }
-  */
 
   return supabaseResponse;
 }
