@@ -7,14 +7,12 @@ export async function proxy(request: NextRequest) {
 
   // --- НАСТРОЙКА ЗАЩИЩЕННЫХ МАРШРУТОВ ---
   const isProtectedRoute =
-    request.nextUrl.pathname.startsWith('/profile') ||
-    request.nextUrl.pathname.startsWith('/orders') ||
-    request.nextUrl.pathname.startsWith('/admin') ||
-    request.nextUrl.pathname.startsWith('/courier');
+    pathname.startsWith('/profile') ||
+    pathname.startsWith('/orders') ||
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/courier');
 
-  const isAuthRoute =
-    request.nextUrl.pathname.startsWith('/login') ||
-    request.nextUrl.pathname.startsWith('/register');
+  const isAuthRoute = pathname.startsWith('/login') || pathname.startsWith('/register');
 
   // Если пользователь не авторизован и лезет в защищенный роут — на логин!
   if (!user && isProtectedRoute) {
