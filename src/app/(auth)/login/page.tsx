@@ -1,4 +1,4 @@
-import { LoginForm } from './login-form';
+import { LoginForm } from './LoginForm';
 import Link from 'next/link';
 
 export default function LoginPage() {
