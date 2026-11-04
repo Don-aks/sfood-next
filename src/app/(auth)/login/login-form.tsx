@@ -17,7 +17,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { toast } from 'sonner';
 
 const formSchema = z.object({
-  email: z.string().email({ message: 'Введите корректный email' }),
+  email: z.email({ message: 'Введите корректный email' }),
   password: z.string().min(6, { message: 'Пароль должен быть не менее 6 символов' }),
 });
 
