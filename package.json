@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky",
-    "db:types": "npx supabase gen types typescript --project-id ВАШ_PROJECT_ID | Set-Content -Encoding utf8 ./src/shared/api/supabase/types.ts"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
