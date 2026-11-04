@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 
-import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/components/theme-provider'; // Наш новый провайдер темы
-import { Providers } from '@/store/providers'; // Ваш Redux Provider
+import { Toaster } from '@/components/ui/sonner';
+import { Providers } from '@/store/Providers'; // Ваш Redux Provider
+import { Header } from '@/widgets/Header';
+import { Footer } from '@/widgets/Footer';
+
+import './globals.css';
 
 // Подключаем шрифт Inter (он отлично поддерживает кириллицу)
 const inter = Inter({
@@ -32,9 +35,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Providers>
-            <main className="flex-grow">{children}</main>
+            <Header />
+            <main className="grow">{children}</main>
+            <Footer />
           </Providers>
-          {/* Toaster лучше держать вне Providers, но внутри ThemeProvider */}
+
           <Toaster position="top-center" richColors />
         </ThemeProvider>
       </body>
