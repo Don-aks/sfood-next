@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 // Схема валидации с помощью Zod
 const formSchema = z.object({
   fullName: z.string().min(2, { message: 'Имя должно быть не менее 2 символов' }),
-  email: z.string().email({ message: 'Введите корректный email' }),
+  email: z.email({ message: 'Введите корректный email' }),
   password: z.string().min(6, { message: 'Пароль должен быть не менее 6 символов' }),
 });
 
@@ -34,7 +34,7 @@ export function RegisterForm() {
       new Promise((resolve) => setTimeout(resolve, 1000)), // Имитация запроса
       {
         loading: 'Регистрация...',
-        success: () => 'Успешная регистрация! (Это пока заглушка)',
+        success: () => 'Успешная регистрация!',
         error: 'Ошибка регистрации',
       }
     );
