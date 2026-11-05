@@ -4,7 +4,7 @@ import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 
 import cartReducer from '@/features/cart/cartSlice';
 
-const createNoopStorage = () => ({
+const noopStorage = {
   getItem() {
     return Promise.resolve(null);
   },
@@ -14,9 +14,9 @@ const createNoopStorage = () => ({
   removeItem() {
     return Promise.resolve();
   },
-});
+};
 
-const storage = typeof window !== 'undefined' ? createWebStorage('local') : createNoopStorage();
+const storage = typeof window !== 'undefined' ? createWebStorage('local') : noopStorage;
 
 const persistConfig = {
   key: 'root',
