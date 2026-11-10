@@ -255,3 +255,5 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuSubContent,
 };
+
+// Переиспользуемое выпадающее меню. Сейчас используется в хэдере.
