@@ -89,3 +89,5 @@ function CardFooter({ className, ...props }: React.ComponentProps<'div'>) {
 }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardAction, CardDescription, CardContent };
+
+// Универсальный визуальный контейнер. В будущем будет использоваться для карточек ресторанов, заказов, блюд и инфоблоков.

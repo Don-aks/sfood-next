@@ -17,3 +17,5 @@ function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
 }
 
 export { Input };
+
+// Унифицированное поле ввода. В будущем можно дополнить общами вариантами состояний, но нельзя сюда помещать бизнес-валидацию.
